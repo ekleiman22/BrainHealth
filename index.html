@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* 100% viewport height */
+        }
+
+        #upper-panel {
+            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;            
+            flex: 20% 0 0; /* 20% height, do not grow or shrink */
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        }
+        #upper-left {
+            border: double;
+            flex: 67% 0 0; /* 80% height, do not grow or shrink */
+            margin-left:50px;
+            margin-right:50px;
+            padding:5px;
+        }
+        #upper-right {
+            
+            flex: 1; /* Take remaining height */
+        }
+
+        #second-panel {
+            width: 90%;
+            flex: 60% 0 0;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        #second-panel-1 { 
+            
+            flex: 20% 0 0;
+            flex-direction:column;
+           
+            margin-left: 50px;
+            margin-right: 20px;
+            
+        }
+
+        #second-panel-1-1 /*  countdown */ {
+            flex: 20% 0 0;
+            border: double;
+            max-height: 200px;
+            text-align: center;
+            font-size: 30px;
+            vertical-align: central;
+            margin-bottom:10px;
+        }
+        #second-panel-1-2 { /*  buttons */
+          flex:1;
+
+        }
+
+        #second-panel-2 { /* combo of letters */
+            flex: 5% 0 0;
+        }
+        #second-panel-3 { /* text area of words */
+            flex: 1;
+            
+        }
+            #summary-panel {
+                flex: 1; /* Take remaining height */
+                display: flex;
+                flex-direction: row;
+            }
+    </style>
+    
+</head>
+<body>
+    <div id="upper-panel">
+
+        <div id="upper-left">
+            <!--<div style="text-align:center">
+                Тест на ясность ума
+            </div>-->
+
+        </div>
+        <div id="upper-right">
+            Language:<select id="cmbLang">
+    <option value="1">Русский</option>
+    <option value="2">English</option>
+    <option value="3">עברית</option>
+    <option value="4">Français</option>
+</select>
+        </div>
+    </div>
+    <div id="second-panel">
+        <div id="second-panel-1">
+            <div id="second-panel-1-1">
+                01:00
+            </div>
+            <div id="second-panel-1-2">
+                <input id="btnStart" type="button" value="Старт" />
+                <input id="btnReset" type="button" value="Очистить" />
+            </div>
+        </div>
+        <div id="second-panel-2">
+            <select id="cmbLetters">
+                
+
+            </select>
+        </div>
+        <div id="second-panel-3">
+            <textarea id="txtWords" rows="15" cols="30">
+
+            </textarea>
+        </div>
+    </div>
+    <div id="summary-panel">
+        Summary
+    </div>
+    <script src="resources.js"></script>
+    <script src="operations.js"></script>
+
+</body>
+</html>
