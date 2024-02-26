@@ -141,7 +141,7 @@ function getWord(word) {
         if (currentList.includes(word))
             return;
         let firstLetter = cmbLetters.value;
-        if (word[0] == firstLetter) {
+        if (word[0].toLowerCase() == firstLetter) {
             txtWords.value += word + "\n";
             foundedWordsCount++;
             currentList.push(word);
